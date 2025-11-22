@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Fortune</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.45);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .cookies-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .cookie {
+            width: 140px;
+            height: 140px;
+            background: url('https://thumbs.dreamstime.com/b/fortune-cookie-29364274.jpg') no-repeat center/cover;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+        .cookie:hover {
+            transform: scale(1.15);
+        }
+        .cookie.opened {
+            animation: crack 1s forwards;
+        }
+        @keyframes crack {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.25) rotate(10deg); }
+            100% { transform: scale(1.1) rotate(-8deg); opacity: 0; }
+        }
+        #message-box {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            display: none;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>I hope this might have made you feel okay<br>Now let's test your fortune<br><span style="font-size:0.9rem;opacity:0.8;">(Not written by me, fetched from an online API)</span></h1>
+
+        <div class="cookies-wrapper">
+            <div class="cookie" onclick="revealFortune(0)"></div>
+            <div class="cookie" onclick="revealFortune(1)"></div>
+            <div class="cookie" onclick="revealFortune(2)"></div>
+            <div class="cookie" onclick="revealFortune(3)"></div>
+        </div>
+
+        <div id="message-box"></div>
+    </div>
+
+    <script>
+        let chosen = false;
+
+        // 100 comforting quotes
+        const quotes = [
+            "You are stronger than the moments that tried to break you.",
+            "It's okay to feel lost. Even the stars take time to find their place.",
+            "You’ve survived every bad day so far. You’ll survive this one too.",
+            "You deserve the same kindness you give to everyone else.",
+            "Storms don’t last forever. Neither will this feeling.",
+            "You don’t have to be perfect to be worthy of love and peace.",
+            "Your heart has been through a lot, but it’s still beating with hope.",
+            "Even gentle souls are capable of fierce strength.",
+            "The world is softer because you exist in it.",
+            "You matter more than you know.",
+            "Healing is not linear and that’s okay.",
+            "Some days surviving is an achievement too.",
+            "You’re allowed to rest without feeling guilty.",
+            "Your feelings are valid even if others don’t understand them.",
+            "You are not alone, even when it feels like it.",
+            "You don't have to carry everything by yourself.",
+            "Please remember: your best is enough.",
+            "You are allowed to outgrow people, places, and versions of yourself.",
+            "Your story isn’t over yet; there are gentler chapters coming.",
+            "You are doing better than you think.",
+            "Even on days when you feel unnoticed, you still matter.",
+            "Your heart deserves peace too.",
+            "It’s okay to take life one small step at a time.",
+            "You don’t have to pretend to be okay.",
+            "You are worthy of love on your best and worst days.",
+            "There is nothing wrong with needing help.",
+            "You have a beautiful resilience within you.",
+            "You’ve grown so much, even if you don’t see it.",
+            "Your softness is not a weakness.",
+            "You are allowed to feel proud of yourself.",
+            "Life is tough, but so are you.",
+            "You’re a work of art still in progress.",
+            "Your presence is a gift to the world.",
+            "Your heart isn’t broken; it’s learning.",
+            "Slow progress is still progress.",
+            "You deserve to be treated gently.",
+            "Hope is still alive inside you, even on dark days.",
+            "Be kind to yourself. You're trying.",
+            "You’re allowed to feel everything deeply.",
+            "Your existence is enough.",
+            "You’re allowed to ask for space to breathe.",
+            "You’re learning, growing, healing — and that’s beautiful.",
+            "The universe is not done giving you good things.",
+            "You deserve peace, even after everything you’ve faced.",
+            "Your courage is quiet but real.",
+            "You are worthy of soft moments in life.",
+            "The sun will rise for you again.",
+            "You’ve come farther than you realize.",
+            "Your heart knows how to rebuild itself.",
+            "You deserve someone who sees your light.",
+            "You can still bloom, even after the coldest season.",
+            "It’s okay to not have all the answers.",
+            "You matter. Your feelings matter.",
+            "Every day you show up is a victory.",
+            "You have survived 100% of your worst days.",
+            "You’re trying — and that alone is something to be proud of.",
+            "You are allowed to take up space.",
+            "Your emotions are not a burden.",
+            "You deserve calmness after chaos.",
+            "You are enough, even on days when you feel like you're not.",
+            "You are allowed to cry and still be strong.",
+            "You are capable of rebuilding.",
+            "The world is brighter with you in it.",
+            "Your pain is real, but so is your ability to heal.",
+            "You don't need to rush your healing.",
+            "You have a heart that refuses to quit.",
+            "Your strength is deeper than your wounds.",
+            "You are worthy of a peaceful life.",
+            "You bring light even when you feel dim.",
+            "You are not defined by your struggles.",
+            "Every breath is a beginning.",
+            "The world needs your softness.",
+            "You’re doing your best and that’s enough.",
+            "You deserve days that feel gentle.",
+            "You are lovable, even when you doubt it.",
+            "You’re becoming someone stronger.",
+            "You deserve to feel safe in your own heart.",
+            "You are worthy of comfort, always.",
+            "Your scars tell a story of survival.",
+            "You’re allowed to choose peace.",
+            "One day you will thank yourself for not giving up.",
+            "You are not too much — you are enough.",
+            "There is strength in your softness.",
+            "Your heart still knows how to hope.",
+            "You’re worthy of someone who stays.",
+            "Your journey is far from over.",
+            "The world hasn’t seen the best of you yet.",
+            "Your feelings are not wrong.",
+            "You’ve held yourself together beautifully.",
+            "You deserve to be loved gently.",
+            "You are allowed to rest.",
+            "You are worthy — always.",
+            "Better days are coming for you.",
+            "Your story still has so much beauty left in it."
+        ];
+
+        // Create 4 unique random quotes
+        const choices = [];
+        while (choices.length < 4) {
+            const r = Math.floor(Math.random() * quotes.length);
+            if (!choices.includes(r)) choices.push(r);
+        }
+
+        function revealFortune(index) {
+            if (chosen) return;
+            chosen = true;
+
+            const cookies = document.querySelectorAll('.cookie');
+            cookies[index].classList.add('opened');
+
+            const message = quotes[choices[index]];
+
+            const messageBox = document.getElementById("message-box");
+            messageBox.style.display = "block";
+            messageBox.innerHTML = message;
+
+            cookies.forEach(c => c.style.pointerEvents = "none");
+        }
+    </script>
+</body>
+</html>
